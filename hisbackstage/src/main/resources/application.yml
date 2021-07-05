@@ -1,0 +1,16 @@
+server:
+  port: 8188
+spring:
+  redis:
+    database: 2
+  application:
+    name: hisbackstage
+
+#下面这些内容是为了让MyBatis映射
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    cache-enabled: true
+  #指定Mybatis的Mapper文件
+  mapper-locations: classpath:mappers/*xml
+  type-aliases-package: cn.gson.hisbackstage.mybatis.entity
